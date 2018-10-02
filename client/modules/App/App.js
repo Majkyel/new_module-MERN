@@ -9,7 +9,7 @@ import styles from './App.css';
 import Helmet from 'react-helmet';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
+import Navigation from './components/Navigation/Navigation';
 // Import Actions
 import { toggleAddPost } from './AppActions';
 import { switchLanguage } from '../../modules/Intl/IntlActions';
@@ -54,6 +54,7 @@ export class App extends Component {
               },
             ]}
           />
+          <Navigation />
           <Header
             switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
             intl={this.props.intl}
